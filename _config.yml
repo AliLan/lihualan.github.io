@@ -1,8 +1,8 @@
 title: Lihua's Blog
 author: Lihua Lan
 description: 记录我的研究生学习旅程
-baseurl: ""
-url: "https://lihualan.github.io"
+baseurl: "/lihualan.github.io"
+url: "https://AliLan.github.io"
 theme: minima
 plugins:
   - jekyll-feed
