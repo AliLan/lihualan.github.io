@@ -8,3 +8,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 markdown: kramdown
+minima:
+  skin: classic
+  include_css:
+    - /assets/css/custom.css

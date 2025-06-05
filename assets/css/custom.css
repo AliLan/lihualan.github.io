@@ -1,0 +1,16 @@
+/* 设置整个网站背景为浅粉色 */
+body {
+  background-color: #fff0f5;
+}
+
+/* 设置顶部标题栏颜色为淡蓝色 */
+.site-header {
+  background-color: #e0f0ff;
+}
+
+/* 设置标题颜色 */
+.site-title, .site-title a {
+  color: #004466 !important;
+  font-weight: bold;
+}
+
