@@ -5,14 +5,14 @@ subtitle: Recording my learning and growth
 permalink: /en/
 ---
 
-<!-- 语言选择弹窗 -->
+<!-- Language Selection Modal -->
 <div id="languageModal" class="language-modal">
   <div class="language-modal-content">
     <div class="language-modal-header">
-      <h2>🌍 选择语言 / Choose Language</h2>
+      <h2>🌍 Choose Language / 选择语言</h2>
     </div>
     <div class="language-modal-body">
-      <p>请选择您偏好的语言 / Please select your preferred language:</p>
+      <p>Please select your preferred language / 请选择您偏好的语言:</p>
       <div class="language-buttons">
         <button class="language-btn chinese-btn" onclick="selectLanguage('chinese')">
           <span class="flag">🇨🇳</span>
@@ -22,7 +22,7 @@ permalink: /en/
         <button class="language-btn english-btn" onclick="selectLanguage('english')">
           <span class="flag">🇺🇸</span>
           <span class="language-text">English</span>
-          <span class="language-sub">英语</span>
+          <span class="language-sub">English</span>
         </button>
       </div>
     </div>
@@ -41,7 +41,7 @@ permalink: /en/
       <div class="colorful-section gradient-pinkblue">
         <h2>🚀 Featured Topics</h2>
         <ul class="post-highlights">
-          <li>🤖 <b>AI/Machine Learning</b>: Latest tech and hands-on experience</li>
+          <li>🤖 <b>AI/Machine Learning</b>: Latest technology and hands-on experience</li>
           <li>💻 <b>Web Development</b>: Frontend, backend, and full-stack growth</li>
           <li>🧠 <b>Algorithms</b>: Coding practice and competition insights</li>
           <li>🌈 <b>Life</b>: Inspiration, essays, and growth stories</li>
@@ -390,37 +390,23 @@ permalink: /en/
 </style>
 
 <script>
-// 语言选择功能
+// Language selection functionality
 function selectLanguage(language) {
-  // 保存用户的语言选择到本地存储
   localStorage.setItem('preferredLanguage', language);
-  
-  // 隐藏弹窗
   document.getElementById('languageModal').style.display = 'none';
-  
-  // 根据选择跳转到相应页面
   if (language === 'chinese') {
     window.location.href = '/';
   }
-  // 如果选择英文，保持在当前页面
 }
-
-// 页面加载时检查是否已经选择过语言
 document.addEventListener('DOMContentLoaded', function() {
   const preferredLanguage = localStorage.getItem('preferredLanguage');
-  
-  // 如果用户已经选择过语言，隐藏弹窗
   if (preferredLanguage) {
     document.getElementById('languageModal').style.display = 'none';
   }
-  
-  // 如果用户直接访问中文页面，也隐藏弹窗
   if (window.location.pathname === '/') {
     document.getElementById('languageModal').style.display = 'none';
   }
 });
-
-// 添加键盘快捷键支持
 document.addEventListener('keydown', function(event) {
   const modal = document.getElementById('languageModal');
   if (modal.style.display !== 'none') {
@@ -429,7 +415,6 @@ document.addEventListener('keydown', function(event) {
     } else if (event.key === '2' || event.key === 'e') {
       selectLanguage('english');
     } else if (event.key === 'Escape') {
-      // ESC键选择中文（默认）
       selectLanguage('chinese');
     }
   }
