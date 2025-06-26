@@ -1,51 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>欢迎来到我的博客 | 丽华的博客</title>
-    <link rel="stylesheet" href="/lihualan.github.io/assets/main.css">
-    <link rel="stylesheet" href="/lihualan.github.io/assets/css/custom.css"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>欢迎来到我的博客 | 丽华的博客</title>
-<meta name="generator" content="Jekyll v3.9.5" />
-<meta property="og:title" content="欢迎来到我的博客" />
-<meta name="author" content="丽华 Lan" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="记录我的研究生学习旅程 - 技术分享、学习笔记、项目经验" />
-<meta property="og:description" content="记录我的研究生学习旅程 - 技术分享、学习笔记、项目经验" />
-<link rel="canonical" href="http://0.0.0.0:4000/lihualan.github.io/" />
-<meta property="og:url" content="http://0.0.0.0:4000/lihualan.github.io/" />
-<meta property="og:site_name" content="丽华的博客" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="欢迎来到我的博客" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"丽华 Lan"},"description":"记录我的研究生学习旅程 - 技术分享、学习笔记、项目经验","headline":"欢迎来到我的博客","name":"丽华 Lan","sameAs":["https://github.com/AliLan","https://linkedin.com/in/your-profile","mailto:your-email@example.com"],"url":"http://0.0.0.0:4000/lihualan.github.io/"}</script>
-<!-- End Jekyll SEO tag -->
-</head>
-  <body>
-    <header class="site-header" role="banner">
-      <div class="wrapper">
-        <a class="site-title" rel="author" href="/lihualan.github.io/">丽华的博客</a>
-        <nav class="site-nav">
-          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-          <label for="nav-trigger">
-            <span class="menu-icon">
-              <svg viewBox="0 0 18 15" width="18px" height="15px">
-                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-              </svg>
-            </span>
-          </label>
-          <div class="trigger">
-            <a class="page-link" href="/lihualan.github.io/">欢迎来到我的博客</a>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <!-- 语言选择弹窗 -->
+---
+layout: default
+title: Welcome to My Blog
+subtitle: Recording my learning and growth
+permalink: /en/
+---
+
+<!-- 语言选择弹窗 -->
 <div id="languageModal" class="language-modal">
   <div class="language-modal-content">
     <div class="language-modal-header">
@@ -70,44 +30,35 @@
 </div>
 
 <div style="text-align:right; margin-top:1rem;">
-  <b>中文</b> | <a href="/en/">English</a>
+  <a href="/">中文</a> | <b>English</b>
 </div>
 
 <div class="nature-bg">
   <div class="main-columns">
     <div class="main-left">
-      <h1>👋 Hi, 我是丽华</h1>
-      <p class="lead">欢迎来到我的个人博客！这里记录了我的学习成长、技术探索与生活灵感。</p>
+      <h1>👋 Hi, I'm Lihua</h1>
+      <p class="lead">Welcome to my personal blog! Here I record my learning, tech explorations, and inspirations.</p>
       <div class="colorful-section gradient-pinkblue">
-        <h2>🚀 精选主题</h2>
+        <h2>🚀 Featured Topics</h2>
         <ul class="post-highlights">
-          <li>🤖 <b>AI/机器学习</b>：最新技术与实战经验</li>
-          <li>💻 <b>Web开发</b>：前端、后端与全栈成长</li>
-          <li>🧠 <b>算法</b>：刷题与竞赛心得</li>
-          <li>🌈 <b>生活</b>：灵感、随笔与成长故事</li>
+          <li>🤖 <b>AI/Machine Learning</b>: Latest tech and hands-on experience</li>
+          <li>💻 <b>Web Development</b>: Frontend, backend, and full-stack growth</li>
+          <li>🧠 <b>Algorithms</b>: Coding practice and competition insights</li>
+          <li>🌈 <b>Life</b>: Inspiration, essays, and growth stories</li>
         </ul>
       </div>
     </div>
     <div class="main-right">
       <div class="colorful-section gradient-bluegreen posts-list-section">
-        <h2>📝 最新文章</h2>
+        <h2>📝 Latest Posts</h2>
         <ul class="posts-list">
-          
+          {% for post in site.posts limit:8 %}
           <li class="post-card">
-            <a href="/lihualan.github.io/posts/welcome/" class="post-title">欢迎来到我的博客</a>
-            <span class="post-date">2025-06-05</span>
-            <p class="post-excerpt">这是我第一篇博客文章，欢迎来到我的研究生日志博客！在这里我会记录技术笔记、项目经验、学习心得等内容。
-</p>
+            <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
+            <span class="post-date">{{ post.date | date: '%Y-%m-%d' }}</span>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 60 }}</p>
           </li>
-          
-          <li class="post-card">
-            <a href="/lihualan.github.io/posts/web_scraping_guide/" class="post-title">Web_scraping_guide</a>
-            <span class="post-date">2025-06-05</span>
-            <p class="post-excerpt">Python爬虫完整学习指南
-
-</p>
-          </li>
-          
+          {% endfor %}
         </ul>
       </div>
     </div>
@@ -115,8 +66,8 @@
 
   <div class="bottom-sections">
     <div class="colorful-section gradient-bluegreen about-section">
-      <h2>🌟 关于我</h2>
-      <p>计算机专业研究生，热爱技术、设计与分享。目标是用代码和创意让世界更美好。</p>
+      <h2>🌟 About Me</h2>
+      <p>Graduate student in Computer Science, passionate about technology, design, and sharing. My goal is to make the world better with code and creativity.</p>
       <div class="about-icons">
         <span title="AI Enthusiast">🤖</span>
         <span title="Web Developer">💻</span>
@@ -125,7 +76,7 @@
       </div>
     </div>
     <div class="colorful-section gradient-yellowpink contact-section">
-      <h2>📬 联系我</h2>
+      <h2>📬 Contact Me</h2>
       <div class="social-links">
         <a href="https://github.com/AliLan" class="social-link">GitHub</a>
         <a href="mailto:your-email@example.com" class="social-link">Email</a>
@@ -293,26 +244,6 @@
   background: #fff;
   color: #ff6b9d;
 }
-@media (max-width: 900px) {
-  .main-columns, .bottom-sections {
-    flex-direction: column;
-    gap: 1.2rem;
-    padding-top: 40px;
-  }
-  .main-left, .main-right, .about-section, .contact-section {
-    max-width: 100%;
-    min-width: 0;
-  }
-}
-@media (max-width: 600px) {
-  .home h1 { font-size: 2.1rem; }
-  .colorful-section { padding: 1.2rem 0.5rem; }
-  .nature-content { padding-top: 40px; }
-  .cloud1 { width: 120px; }
-  .cloud2 { width: 80px; }
-  .tree1 { width: 40px; }
-  .tree2 { width: 32px; }
-}
 
 /* 语言选择弹窗样式 */
 .language-modal {
@@ -421,7 +352,27 @@
   background: linear-gradient(135deg, rgba(90, 200, 250, 0.3) 0%, rgba(0, 201, 167, 0.3) 100%);
 }
 
+@media (max-width: 900px) {
+  .main-columns, .bottom-sections {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-top: 40px;
+  }
+  .main-left, .main-right, .about-section, .contact-section {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
 @media (max-width: 600px) {
+  .home h1 { font-size: 2.1rem; }
+  .colorful-section { padding: 1.2rem 0.5rem; }
+  .nature-content { padding-top: 40px; }
+  .cloud1 { width: 120px; }
+  .cloud2 { width: 80px; }
+  .tree1 { width: 40px; }
+  .tree2 { width: 32px; }
+  
   .language-modal-content {
     padding: 2rem 1.5rem;
   }
@@ -448,10 +399,10 @@ function selectLanguage(language) {
   document.getElementById('languageModal').style.display = 'none';
   
   // 根据选择跳转到相应页面
-  if (language === 'english') {
-    window.location.href = '/en/';
+  if (language === 'chinese') {
+    window.location.href = '/';
   }
-  // 如果选择中文，保持在当前页面
+  // 如果选择英文，保持在当前页面
 }
 
 // 页面加载时检查是否已经选择过语言
@@ -463,8 +414,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('languageModal').style.display = 'none';
   }
   
-  // 如果用户直接访问英文页面，也隐藏弹窗
-  if (window.location.pathname === '/en/') {
+  // 如果用户直接访问中文页面，也隐藏弹窗
+  if (window.location.pathname === '/') {
     document.getElementById('languageModal').style.display = 'none';
   }
 });
@@ -483,23 +434,4 @@ document.addEventListener('keydown', function(event) {
     }
   }
 });
-</script>
-
-
-      </div>
-    </main>
-    <footer class="site-footer h-card">
-      <data class="u-url" href="/lihualan.github.io/"></data>
-      <div class="wrapper">
-        <h2 class="footer-heading">丽华的博客</h2>
-        <div class="footer-col-wrapper">
-          <div class="footer-col footer-col-1">
-            <ul class="contact-list">
-              <li class="p-name">丽华 Lan</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html> 
+</script> 
