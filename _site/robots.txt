@@ -1,1 +1,1 @@
-Sitemap: https://alilan.github.io/lihualan.github.io/sitemap.xml
+Sitemap: http://localhost:4002/lihualan.github.io/sitemap.xml

@@ -432,3 +432,7 @@ a:hover::after {
   background: var(--gradient-secondary);
 }
 
+.wrapper {
+  max-width: 1500px !important;
+}
+
