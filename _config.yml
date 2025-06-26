@@ -1,0 +1,58 @@
+title: 丽华的博客
+author: 丽华 Lan
+description: 记录我的研究生学习旅程 - 技术分享、学习笔记、项目经验
+baseurl: "/lihualan.github.io"
+url: "https://AliLan.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+paginate: 5
+paginate_path: "/page/:num/"
+
+# SEO Settings
+seo:
+  title: "丽华的博客 - 研究生学习笔记"
+  description: "记录我的研究生学习旅程，分享技术文章、学习笔记和项目经验"
+  author: "丽华 Lan"
+  image: "/assets/images/og-image.jpg"
+  twitter:
+    creator: "@your_twitter_handle"
+
+# Social Media
+social:
+  name: 丽华 Lan
+  links:
+    - https://github.com/AliLan
+    - https://linkedin.com/in/your-profile
+    - mailto:your-email@example.com
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:title/
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-category
+    tag: archive-tag
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+minima:
+  include_css:
+    - /assets/css/custom.css
+  social_links:
+    github: AliLan
+    email: your-email@example.com
