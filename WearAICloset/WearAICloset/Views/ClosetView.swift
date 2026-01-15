@@ -37,6 +37,7 @@ struct ClosetView: View {
 #Preview {
     ClosetView(viewModel: ClosetViewModel(
         closetRepository: MockClosetRepository(),
-        closetService: DefaultClosetService()
+        closetService: DefaultClosetService(),
+        userSession: UserSession(authService: DefaultAuthService())
     ))
 }

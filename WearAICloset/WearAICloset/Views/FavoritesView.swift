@@ -30,6 +30,7 @@ struct FavoritesView: View {
 
 #Preview {
     FavoritesView(viewModel: FavoritesViewModel(
-        outfitRepository: MockOutfitRepository()
+        outfitRepository: MockOutfitRepository(),
+        userSession: UserSession(authService: DefaultAuthService())
     ))
 }

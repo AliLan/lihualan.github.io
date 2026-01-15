@@ -6,10 +6,12 @@ final class ClosetViewModel: ObservableObject {
 
     private let closetRepository: ClosetRepository
     private let closetService: ClosetService
+    let userSession: UserSession
 
-    init(closetRepository: ClosetRepository, closetService: ClosetService) {
+    init(closetRepository: ClosetRepository, closetService: ClosetService, userSession: UserSession) {
         self.closetRepository = closetRepository
         self.closetService = closetService
+        self.userSession = userSession
         loadData()
     }
 

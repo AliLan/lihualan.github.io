@@ -7,9 +7,11 @@ final class SettingsViewModel: ObservableObject {
     @Published var analyticsEnabled: Bool = true
 
     private let analyticsService: AnalyticsService
+    let userSession: UserSession
 
-    init(analyticsService: AnalyticsService) {
+    init(analyticsService: AnalyticsService, userSession: UserSession) {
         self.analyticsService = analyticsService
+        self.userSession = userSession
     }
 
     func toggleAnalytics() {

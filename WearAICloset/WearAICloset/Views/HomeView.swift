@@ -48,6 +48,7 @@ struct HomeView: View {
 #Preview {
     HomeView(viewModel: HomeViewModel(
         closetRepository: MockClosetRepository(),
-        analyticsService: DefaultAnalyticsService()
+        analyticsService: DefaultAnalyticsService(),
+        userSession: UserSession(authService: DefaultAuthService())
     ))
 }

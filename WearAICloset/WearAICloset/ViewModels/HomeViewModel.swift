@@ -8,10 +8,12 @@ final class HomeViewModel: ObservableObject {
 
     private let closetRepository: ClosetRepository
     private let analyticsService: AnalyticsService
+    let userSession: UserSession
 
-    init(closetRepository: ClosetRepository, analyticsService: AnalyticsService) {
+    init(closetRepository: ClosetRepository, analyticsService: AnalyticsService, userSession: UserSession) {
         self.closetRepository = closetRepository
         self.analyticsService = analyticsService
+        self.userSession = userSession
         loadHighlights()
     }
 
