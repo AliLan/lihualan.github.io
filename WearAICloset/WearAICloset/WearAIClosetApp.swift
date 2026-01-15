@@ -12,6 +12,7 @@ struct WearAIClosetApp: App {
         let session = UserSession(authService: DefaultAuthService())
         let closetItemsRepository = FirestoreClosetItemsRepository()
         let outfitsRepository = FirestoreOutfitsRepository()
+        let dataCleanupService = FirestoreDataCleanupService()
         _userSession = StateObject(wrappedValue: session)
         _homeViewModel = StateObject(wrappedValue: HomeViewModel(
             closetItemsRepository: closetItemsRepository,
@@ -30,6 +31,7 @@ struct WearAIClosetApp: App {
         ))
         _settingsViewModel = StateObject(wrappedValue: SettingsViewModel(
             analyticsService: DefaultAnalyticsService(),
+            dataCleanupService: dataCleanupService,
             userSession: session
         ))
     }

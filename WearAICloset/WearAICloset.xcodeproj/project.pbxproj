@@ -40,6 +40,7 @@
 		1A2B3C4D5E6F701122334525 /* OutfitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449E /* OutfitResult.swift */; };
 		1A2B3C4D5E6F701122334526 /* OutfitsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449F /* OutfitsRepository.swift */; };
 		1A2B3C4D5E6F701122334527 /* OutfitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7011223344A0 /* OutfitDetailView.swift */; };
+		1A2B3C4D5E6F701122334528 /* DataCleanupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7011223344A1 /* DataCleanupService.swift */; };
 		1A2B3C4D5E6F701122334519 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334491 /* FirebaseAuth */; };
 		1A2B3C4D5E6F70112233451A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334492 /* FirebaseFirestore */; };
 		1A2B3C4D5E6F70112233451B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334493 /* FirebaseStorage */; };
@@ -83,6 +84,7 @@
 		1A2B3C4D5E6F70112233449E /* OutfitResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitResult.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F70112233449F /* OutfitsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitsRepository.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F7011223344A0 /* OutfitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitDetailView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7011223344A1 /* DataCleanupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCleanupService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				1A2B3C4D5E6F701122334482 /* FirebaseBootstrap.swift */,
 				1A2B3C4D5E6F701122334483 /* UserSession.swift */,
 				1A2B3C4D5E6F70112233449D /* OutfitRuleEngine.swift */,
+				1A2B3C4D5E6F7011223344A1 /* DataCleanupService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				1A2B3C4D5E6F701122334525 /* OutfitResult.swift in Sources */,
 				1A2B3C4D5E6F701122334526 /* OutfitsRepository.swift in Sources */,
 				1A2B3C4D5E6F701122334527 /* OutfitDetailView.swift in Sources */,
+				1A2B3C4D5E6F701122334528 /* DataCleanupService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
