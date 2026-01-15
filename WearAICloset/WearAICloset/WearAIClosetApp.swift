@@ -12,7 +12,7 @@ struct WearAIClosetApp: App {
         let session = UserSession(authService: DefaultAuthService())
         _userSession = StateObject(wrappedValue: session)
         _homeViewModel = StateObject(wrappedValue: HomeViewModel(
-            closetRepository: MockClosetRepository(),
+            closetItemsRepository: FirestoreClosetItemsRepository(),
             analyticsService: DefaultAnalyticsService(),
             userSession: session
         ))

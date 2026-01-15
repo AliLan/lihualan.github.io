@@ -1,24 +1,26 @@
 import Foundation
 
-enum Mood: String, CaseIterable, Codable {
+enum Mood: String, CaseIterable, Codable, Identifiable {
+    case happy
     case calm
-    case bold
-    case cozy
-    case energetic
-    case romantic
+    case confident
+    case casual
+    case lowkey
+
+    var id: String { rawValue }
 
     var displayName: String {
         switch self {
+        case .happy:
+            return "Happy"
         case .calm:
             return "Calm"
-        case .bold:
-            return "Bold"
-        case .cozy:
-            return "Cozy"
-        case .energetic:
-            return "Energetic"
-        case .romantic:
-            return "Romantic"
+        case .confident:
+            return "Confident"
+        case .casual:
+            return "Casual"
+        case .lowkey:
+            return "Lowkey"
         }
     }
 }

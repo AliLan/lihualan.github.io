@@ -5,41 +5,67 @@ struct HomeView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 16) {
-                Text("Today's Style Pulse")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-
-                Text("Mood: \(viewModel.currentMood.displayName)")
-                    .font(.headline)
-
-                if viewModel.isLoading {
-                    LoadingView(message: "Loading recommendations...")
-                }
-
-                if let errorMessage = viewModel.errorMessage {
-                    ErrorBanner(message: errorMessage) {
-                        viewModel.refresh()
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    if let errorMessage = viewModel.errorMessage {
+                        ErrorBanner(message: errorMessage) {
+                            viewModel.generateOutfits()
+                        }
                     }
-                }
 
-                Text("Highlights")
-                    .font(.headline)
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Mood")
+                            .font(.headline)
+                        Picker("Mood", selection: $viewModel.selectedMood) {
+                            ForEach(Mood.allCases) { mood in
+                                Text(mood.displayName).tag(mood)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                    }
 
-                ForEach(viewModel.highlightItems) { item in
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(item.category.displayName)
-                            .font(.subheadline)
-                        Text(item.createdAt.formatted(date: .abbreviated, time: .omitted))
-                            .font(.caption)
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Occasion")
+                            .font(.headline)
+                        Picker("Occasion", selection: $viewModel.selectedOccasion) {
+                            ForEach(Occasion.allCases) { occasion in
+                                Text(occasion.displayName).tag(occasion)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                    }
+
+                    HStack(spacing: 12) {
+                        Button("Generate Outfits") {
+                            viewModel.generateOutfits()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .disabled(viewModel.isGenerating)
+
+                        Button("Regenerate") {
+                            viewModel.regenerateOutfits()
+                        }
+                        .buttonStyle(.bordered)
+                        .disabled(viewModel.isGenerating || viewModel.generatedOutfits.isEmpty)
+                    }
+
+                    if viewModel.isGenerating {
+                        LoadingView(message: "Generating outfits...")
+                    }
+
+                    if viewModel.generatedOutfits.isEmpty {
+                        Text("No outfits generated yet.")
                             .foregroundColor(.secondary)
+                    } else {
+                        VStack(alignment: .leading, spacing: 12) {
+                            ForEach(viewModel.generatedOutfits) { outfit in
+                                OutfitResultView(outfit: outfit, itemsById: viewModel.itemsById)
+                            }
+                        }
                     }
-                    .padding(.vertical, 6)
                 }
-
-                Spacer()
+                .padding()
             }
-            .padding()
             .navigationTitle("Home")
         }
     }
@@ -47,7 +73,7 @@ struct HomeView: View {
 
 #Preview {
     HomeView(viewModel: HomeViewModel(
-        closetRepository: MockClosetRepository(),
+        closetItemsRepository: FirestoreClosetItemsRepository(),
         analyticsService: DefaultAnalyticsService(),
         userSession: UserSession(authService: DefaultAuthService())
     ))

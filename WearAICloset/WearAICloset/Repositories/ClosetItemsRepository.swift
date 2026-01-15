@@ -10,6 +10,7 @@ protocol ClosetItemsRepository {
         onError: @escaping (Error) -> Void
     ) -> ListenerRegistration
 
+    func fetchItems(userId: String) async throws -> [ClothingItem]
     func addItem(userId: String, itemId: String, imageData: Data, category: Category) async throws
     func deleteItem(userId: String, item: ClothingItem) async throws
 }
@@ -35,30 +36,22 @@ struct FirestoreClosetItemsRepository: ClosetItemsRepository {
                     return
                 }
 
-                let items = snapshot?.documents.compactMap { document -> ClothingItem? in
-                    let data = document.data()
-                    guard
-                        let imageURLString = data["imageURL"] as? String,
-                        let imageURL = URL(string: imageURLString),
-                        let storagePath = data["storagePath"] as? String,
-                        let categoryRaw = data["category"] as? String,
-                        let category = Category(rawValue: categoryRaw),
-                        let createdAt = (data["createdAt"] as? Timestamp)?.dateValue()
-                    else {
-                        return nil
-                    }
-
-                    return ClothingItem(
-                        id: document.documentID,
-                        imageURL: imageURL,
-                        storagePath: storagePath,
-                        category: category,
-                        createdAt: createdAt
-                    )
+                let items = snapshot?.documents.compactMap { document in
+                    ClothingItem.fromDocument(document)
                 } ?? []
 
                 onChange(items)
             }
+    }
+
+    func fetchItems(userId: String) async throws -> [ClothingItem] {
+        let snapshot = try await firestore
+            .collection("users")
+            .document(userId)
+            .collection("items")
+            .getDocuments()
+
+        return snapshot.documents.compactMap { ClothingItem.fromDocument($0) }
     }
 
     func addItem(userId: String, itemId: String, imageData: Data, category: Category) async throws {

@@ -18,14 +18,14 @@ struct MockOutfitRepository: OutfitRepository {
                 name: "Weekend Warmth",
                 items: [baseItem],
                 occasion: .casual,
-                mood: .cozy,
+                mood: .calm,
                 isFavorite: true
             ),
             Outfit(
                 name: "City Evening",
                 items: [baseItem],
-                occasion: .formal,
-                mood: .bold,
+                occasion: .date,
+                mood: .confident,
                 isFavorite: true
             )
         ]

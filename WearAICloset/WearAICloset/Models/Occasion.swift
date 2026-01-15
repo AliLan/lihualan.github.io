@@ -1,24 +1,26 @@
 import Foundation
 
-enum Occasion: String, CaseIterable, Codable {
-    case casual
+enum Occasion: String, CaseIterable, Codable, Identifiable {
     case work
-    case formal
     case travel
-    case fitness
+    case date
+    case casual
+    case home
+
+    var id: String { rawValue }
 
     var displayName: String {
         switch self {
-        case .casual:
-            return "Casual"
         case .work:
             return "Work"
-        case .formal:
-            return "Formal"
         case .travel:
             return "Travel"
-        case .fitness:
-            return "Fitness"
+        case .date:
+            return "Date"
+        case .casual:
+            return "Casual"
+        case .home:
+            return "Home"
         }
     }
 }

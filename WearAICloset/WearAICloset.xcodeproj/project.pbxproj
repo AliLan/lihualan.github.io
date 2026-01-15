@@ -36,6 +36,9 @@
 		1A2B3C4D5E6F701122334520 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334498 /* ImagePicker.swift */; };
 		1A2B3C4D5E6F701122334521 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334499 /* UIImage+Resize.swift */; };
 		1A2B3C4D5E6F701122334522 /* StorageReference+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449A /* StorageReference+Async.swift */; };
+		1A2B3C4D5E6F701122334523 /* OutfitResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449C /* OutfitResultView.swift */; };
+		1A2B3C4D5E6F701122334524 /* OutfitRuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449D /* OutfitRuleEngine.swift */; };
+		1A2B3C4D5E6F701122334525 /* OutfitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449E /* OutfitResult.swift */; };
 		1A2B3C4D5E6F701122334519 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334491 /* FirebaseAuth */; };
 		1A2B3C4D5E6F70112233451A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334492 /* FirebaseFirestore */; };
 		1A2B3C4D5E6F70112233451B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334493 /* FirebaseStorage */; };
@@ -75,6 +78,9 @@
 		1A2B3C4D5E6F701122334498 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F701122334499 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage+Resize.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F70112233449A /* StorageReference+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReference+Async.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449C /* OutfitResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitResultView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449D /* OutfitRuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitRuleEngine.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449E /* OutfitResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 				1A2B3C4D5E6F70112233446C /* Category.swift */,
 				1A2B3C4D5E6F70112233446D /* ClothingItem.swift */,
 				1A2B3C4D5E6F70112233446E /* Outfit.swift */,
+				1A2B3C4D5E6F70112233449E /* OutfitResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 				1A2B3C4D5E6F701122334481 /* AuthService.swift */,
 				1A2B3C4D5E6F701122334482 /* FirebaseBootstrap.swift */,
 				1A2B3C4D5E6F701122334483 /* UserSession.swift */,
+				1A2B3C4D5E6F70112233449D /* OutfitRuleEngine.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 				1A2B3C4D5E6F701122334473 /* LoadingView.swift */,
 				1A2B3C4D5E6F701122334474 /* ErrorBanner.swift */,
 				1A2B3C4D5E6F701122334498 /* ImagePicker.swift */,
+				1A2B3C4D5E6F70112233449C /* OutfitResultView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -309,6 +318,9 @@
 				1A2B3C4D5E6F701122334520 /* ImagePicker.swift in Sources */,
 				1A2B3C4D5E6F701122334521 /* UIImage+Resize.swift in Sources */,
 				1A2B3C4D5E6F701122334522 /* StorageReference+Async.swift in Sources */,
+				1A2B3C4D5E6F701122334523 /* OutfitResultView.swift in Sources */,
+				1A2B3C4D5E6F701122334524 /* OutfitRuleEngine.swift in Sources */,
+				1A2B3C4D5E6F701122334525 /* OutfitResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
