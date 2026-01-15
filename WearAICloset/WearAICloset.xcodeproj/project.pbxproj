@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A2B3C4D5E6F701122334501 /* WearAIClosetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334461 /* WearAIClosetApp.swift */; };
+		1A2B3C4D5E6F701122334502 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334462 /* HomeView.swift */; };
+		1A2B3C4D5E6F701122334503 /* ClosetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334463 /* ClosetView.swift */; };
+		1A2B3C4D5E6F701122334504 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334464 /* FavoritesView.swift */; };
+		1A2B3C4D5E6F701122334505 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334465 /* SettingsView.swift */; };
+		1A2B3C4D5E6F701122334506 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334466 /* HomeViewModel.swift */; };
+		1A2B3C4D5E6F701122334507 /* ClosetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334467 /* ClosetViewModel.swift */; };
+		1A2B3C4D5E6F701122334508 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334468 /* FavoritesViewModel.swift */; };
+		1A2B3C4D5E6F701122334509 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334469 /* SettingsViewModel.swift */; };
+		1A2B3C4D5E6F70112233450A /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233446A /* Mood.swift */; };
+		1A2B3C4D5E6F70112233450B /* Occasion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233446B /* Occasion.swift */; };
+		1A2B3C4D5E6F70112233450C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233446C /* Category.swift */; };
+		1A2B3C4D5E6F70112233450D /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233446D /* ClothingItem.swift */; };
+		1A2B3C4D5E6F70112233450E /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233446E /* Outfit.swift */; };
+		1A2B3C4D5E6F70112233450F /* ClosetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233446F /* ClosetRepository.swift */; };
+		1A2B3C4D5E6F701122334511 /* ClosetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334471 /* ClosetService.swift */; };
+		1A2B3C4D5E6F701122334512 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334472 /* AnalyticsService.swift */; };
+		1A2B3C4D5E6F701122334513 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334473 /* LoadingView.swift */; };
+		1A2B3C4D5E6F701122334514 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334474 /* ErrorBanner.swift */; };
+		1A2B3C4D5E6F701122334515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334475 /* Assets.xcassets */; };
+		1A2B3C4D5E6F701122334516 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334481 /* AuthService.swift */; };
+		1A2B3C4D5E6F701122334517 /* FirebaseBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334482 /* FirebaseBootstrap.swift */; };
+		1A2B3C4D5E6F701122334518 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334483 /* UserSession.swift */; };
+		1A2B3C4D5E6F70112233451D /* ClosetItemsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334495 /* ClosetItemsRepository.swift */; };
+		1A2B3C4D5E6F70112233451E /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334496 /* AddItemView.swift */; };
+		1A2B3C4D5E6F70112233451F /* ClosetItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334497 /* ClosetItemDetailView.swift */; };
+		1A2B3C4D5E6F701122334520 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334498 /* ImagePicker.swift */; };
+		1A2B3C4D5E6F701122334521 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334499 /* UIImage+Resize.swift */; };
+		1A2B3C4D5E6F701122334522 /* StorageReference+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449A /* StorageReference+Async.swift */; };
+		1A2B3C4D5E6F701122334523 /* OutfitResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449C /* OutfitResultView.swift */; };
+		1A2B3C4D5E6F701122334524 /* OutfitRuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449D /* OutfitRuleEngine.swift */; };
+		1A2B3C4D5E6F701122334525 /* OutfitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449E /* OutfitResult.swift */; };
+		1A2B3C4D5E6F701122334526 /* OutfitsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449F /* OutfitsRepository.swift */; };
+		1A2B3C4D5E6F701122334527 /* OutfitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7011223344A0 /* OutfitDetailView.swift */; };
+		1A2B3C4D5E6F701122334528 /* DataCleanupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7011223344A1 /* DataCleanupService.swift */; };
+		1A2B3C4D5E6F701122334519 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334491 /* FirebaseAuth */; };
+		1A2B3C4D5E6F70112233451A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334492 /* FirebaseFirestore */; };
+		1A2B3C4D5E6F70112233451B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334493 /* FirebaseStorage */; };
+		1A2B3C4D5E6F70112233451C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334494 /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A2B3C4D5E6F701122334461 /* WearAIClosetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearAIClosetApp.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334462 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334463 /* ClosetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334464 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334465 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334466 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334467 /* ClosetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetViewModel.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334468 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334469 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233446A /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233446B /* Occasion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occasion.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233446C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233446D /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233446E /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233446F /* ClosetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetRepository.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334471 /* ClosetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetService.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334472 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334473 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334474 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334477 /* WearAICloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = WearAICloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A2B3C4D5E6F701122334481 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334482 /* FirebaseBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseBootstrap.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334483 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334495 /* ClosetItemsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetItemsRepository.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334496 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334497 /* ClosetItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetItemDetailView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334498 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334499 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage+Resize.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449A /* StorageReference+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReference+Async.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449C /* OutfitResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitResultView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449D /* OutfitRuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitRuleEngine.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449E /* OutfitResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitResult.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449F /* OutfitsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitsRepository.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7011223344A0 /* OutfitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitDetailView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7011223344A1 /* DataCleanupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCleanupService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A2B3C4D5E6F70112233447A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2B3C4D5E6F701122334519 /* FirebaseAuth in Frameworks */,
+				1A2B3C4D5E6F70112233451A /* FirebaseFirestore in Frameworks */,
+				1A2B3C4D5E6F70112233451B /* FirebaseStorage in Frameworks */,
+				1A2B3C4D5E6F70112233451C /* FirebaseCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A2B3C4D5E6F701122334457 = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F701122334459 /* WearAICloset */,
+				1A2B3C4D5E6F701122334458 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F701122334458 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F701122334477 /* WearAICloset.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F701122334459 /* WearAICloset */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F701122334461 /* WearAIClosetApp.swift */,
+				1A2B3C4D5E6F70112233445A /* Views */,
+				1A2B3C4D5E6F70112233445B /* ViewModels */,
+				1A2B3C4D5E6F70112233445C /* Models */,
+				1A2B3C4D5E6F70112233445D /* Repositories */,
+				1A2B3C4D5E6F70112233445E /* Services */,
+				1A2B3C4D5E6F70112233445F /* Components */,
+				1A2B3C4D5E6F70112233449B /* Utilities */,
+				1A2B3C4D5E6F701122334475 /* Assets.xcassets */,
+				1A2B3C4D5E6F701122334476 /* Info.plist */,
+			);
+			path = WearAICloset;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F70112233445A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F701122334462 /* HomeView.swift */,
+				1A2B3C4D5E6F701122334463 /* ClosetView.swift */,
+				1A2B3C4D5E6F701122334496 /* AddItemView.swift */,
+				1A2B3C4D5E6F701122334497 /* ClosetItemDetailView.swift */,
+				1A2B3C4D5E6F7011223344A0 /* OutfitDetailView.swift */,
+				1A2B3C4D5E6F701122334464 /* FavoritesView.swift */,
+				1A2B3C4D5E6F701122334465 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F70112233445B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F701122334466 /* HomeViewModel.swift */,
+				1A2B3C4D5E6F701122334467 /* ClosetViewModel.swift */,
+				1A2B3C4D5E6F701122334468 /* FavoritesViewModel.swift */,
+				1A2B3C4D5E6F701122334469 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F70112233445C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F70112233446A /* Mood.swift */,
+				1A2B3C4D5E6F70112233446B /* Occasion.swift */,
+				1A2B3C4D5E6F70112233446C /* Category.swift */,
+				1A2B3C4D5E6F70112233446D /* ClothingItem.swift */,
+				1A2B3C4D5E6F70112233446E /* Outfit.swift */,
+				1A2B3C4D5E6F70112233449E /* OutfitResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F70112233445D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F70112233446F /* ClosetRepository.swift */,
+				1A2B3C4D5E6F701122334495 /* ClosetItemsRepository.swift */,
+				1A2B3C4D5E6F70112233449F /* OutfitsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F70112233445E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F701122334471 /* ClosetService.swift */,
+				1A2B3C4D5E6F701122334472 /* AnalyticsService.swift */,
+				1A2B3C4D5E6F701122334481 /* AuthService.swift */,
+				1A2B3C4D5E6F701122334482 /* FirebaseBootstrap.swift */,
+				1A2B3C4D5E6F701122334483 /* UserSession.swift */,
+				1A2B3C4D5E6F70112233449D /* OutfitRuleEngine.swift */,
+				1A2B3C4D5E6F7011223344A1 /* DataCleanupService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F70112233445F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F701122334473 /* LoadingView.swift */,
+				1A2B3C4D5E6F701122334474 /* ErrorBanner.swift */,
+				1A2B3C4D5E6F701122334498 /* ImagePicker.swift */,
+				1A2B3C4D5E6F70112233449C /* OutfitResultView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F70112233449B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F701122334499 /* UIImage+Resize.swift */,
+				1A2B3C4D5E6F70112233449A /* StorageReference+Async.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A2B3C4D5E6F701122334456 /* WearAICloset */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A2B3C4D5E6F70112233447C /* Build configuration list for PBXNativeTarget "WearAICloset" */;
+			buildPhases = (
+				1A2B3C4D5E6F701122334478 /* Sources */,
+				1A2B3C4D5E6F701122334479 /* Resources */,
+				1A2B3C4D5E6F70112233447A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WearAICloset;
+			packageProductDependencies = (
+				1A2B3C4D5E6F701122334491 /* FirebaseAuth */,
+				1A2B3C4D5E6F701122334492 /* FirebaseFirestore */,
+				1A2B3C4D5E6F701122334493 /* FirebaseStorage */,
+				1A2B3C4D5E6F701122334494 /* FirebaseCore */,
+			);
+			productName = WearAICloset;
+			productReference = 1A2B3C4D5E6F701122334477 /* WearAICloset.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A2B3C4D5E6F701122334455 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					1A2B3C4D5E6F701122334456 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 1A2B3C4D5E6F70112233447B /* Build configuration list for PBXProject "WearAICloset" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A2B3C4D5E6F701122334457;
+			packageReferences = (
+				1A2B3C4D5E6F701122334490 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 1A2B3C4D5E6F701122334458 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A2B3C4D5E6F701122334456 /* WearAICloset */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A2B3C4D5E6F701122334479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2B3C4D5E6F701122334515 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A2B3C4D5E6F701122334478 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2B3C4D5E6F701122334501 /* WearAIClosetApp.swift in Sources */,
+				1A2B3C4D5E6F701122334502 /* HomeView.swift in Sources */,
+				1A2B3C4D5E6F701122334503 /* ClosetView.swift in Sources */,
+				1A2B3C4D5E6F701122334504 /* FavoritesView.swift in Sources */,
+				1A2B3C4D5E6F701122334505 /* SettingsView.swift in Sources */,
+				1A2B3C4D5E6F701122334506 /* HomeViewModel.swift in Sources */,
+				1A2B3C4D5E6F701122334507 /* ClosetViewModel.swift in Sources */,
+				1A2B3C4D5E6F701122334508 /* FavoritesViewModel.swift in Sources */,
+				1A2B3C4D5E6F701122334509 /* SettingsViewModel.swift in Sources */,
+				1A2B3C4D5E6F70112233450A /* Mood.swift in Sources */,
+				1A2B3C4D5E6F70112233450B /* Occasion.swift in Sources */,
+				1A2B3C4D5E6F70112233450C /* Category.swift in Sources */,
+				1A2B3C4D5E6F70112233450D /* ClothingItem.swift in Sources */,
+				1A2B3C4D5E6F70112233450E /* Outfit.swift in Sources */,
+				1A2B3C4D5E6F70112233450F /* ClosetRepository.swift in Sources */,
+				1A2B3C4D5E6F701122334511 /* ClosetService.swift in Sources */,
+				1A2B3C4D5E6F701122334512 /* AnalyticsService.swift in Sources */,
+				1A2B3C4D5E6F701122334513 /* LoadingView.swift in Sources */,
+				1A2B3C4D5E6F701122334514 /* ErrorBanner.swift in Sources */,
+				1A2B3C4D5E6F701122334516 /* AuthService.swift in Sources */,
+				1A2B3C4D5E6F701122334517 /* FirebaseBootstrap.swift in Sources */,
+				1A2B3C4D5E6F701122334518 /* UserSession.swift in Sources */,
+				1A2B3C4D5E6F70112233451D /* ClosetItemsRepository.swift in Sources */,
+				1A2B3C4D5E6F70112233451E /* AddItemView.swift in Sources */,
+				1A2B3C4D5E6F70112233451F /* ClosetItemDetailView.swift in Sources */,
+				1A2B3C4D5E6F701122334520 /* ImagePicker.swift in Sources */,
+				1A2B3C4D5E6F701122334521 /* UIImage+Resize.swift in Sources */,
+				1A2B3C4D5E6F701122334522 /* StorageReference+Async.swift in Sources */,
+				1A2B3C4D5E6F701122334523 /* OutfitResultView.swift in Sources */,
+				1A2B3C4D5E6F701122334524 /* OutfitRuleEngine.swift in Sources */,
+				1A2B3C4D5E6F701122334525 /* OutfitResult.swift in Sources */,
+				1A2B3C4D5E6F701122334526 /* OutfitsRepository.swift in Sources */,
+				1A2B3C4D5E6F701122334527 /* OutfitDetailView.swift in Sources */,
+				1A2B3C4D5E6F701122334528 /* DataCleanupService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1A2B3C4D5E6F70112233447D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNUSED_VARIABLE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		1A2B3C4D5E6F70112233447E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNUSED_VARIABLE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		1A2B3C4D5E6F70112233447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WearAICloset/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WearAICloset;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Debug;
+		};
+		1A2B3C4D5E6F701122334480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WearAICloset/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WearAICloset;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A2B3C4D5E6F701122334490 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A2B3C4D5E6F701122334491 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A2B3C4D5E6F701122334490 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1A2B3C4D5E6F701122334492 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A2B3C4D5E6F701122334490 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		1A2B3C4D5E6F701122334493 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A2B3C4D5E6F701122334490 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		1A2B3C4D5E6F701122334494 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A2B3C4D5E6F701122334490 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCConfigurationList section */
+		1A2B3C4D5E6F70112233447B /* Build configuration list for PBXProject "WearAICloset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A2B3C4D5E6F70112233447D /* Debug */,
+				1A2B3C4D5E6F70112233447E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A2B3C4D5E6F70112233447C /* Build configuration list for PBXNativeTarget "WearAICloset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A2B3C4D5E6F70112233447F /* Debug */,
+				1A2B3C4D5E6F701122334480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A2B3C4D5E6F701122334455 /* Project object */;
+}
