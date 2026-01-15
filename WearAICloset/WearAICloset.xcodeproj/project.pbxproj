@@ -30,6 +30,12 @@
 		1A2B3C4D5E6F701122334516 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334481 /* AuthService.swift */; };
 		1A2B3C4D5E6F701122334517 /* FirebaseBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334482 /* FirebaseBootstrap.swift */; };
 		1A2B3C4D5E6F701122334518 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334483 /* UserSession.swift */; };
+		1A2B3C4D5E6F70112233451D /* ClosetItemsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334495 /* ClosetItemsRepository.swift */; };
+		1A2B3C4D5E6F70112233451E /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334496 /* AddItemView.swift */; };
+		1A2B3C4D5E6F70112233451F /* ClosetItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334497 /* ClosetItemDetailView.swift */; };
+		1A2B3C4D5E6F701122334520 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334498 /* ImagePicker.swift */; };
+		1A2B3C4D5E6F701122334521 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334499 /* UIImage+Resize.swift */; };
+		1A2B3C4D5E6F701122334522 /* StorageReference+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449A /* StorageReference+Async.swift */; };
 		1A2B3C4D5E6F701122334519 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334491 /* FirebaseAuth */; };
 		1A2B3C4D5E6F70112233451A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334492 /* FirebaseFirestore */; };
 		1A2B3C4D5E6F70112233451B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334493 /* FirebaseStorage */; };
@@ -63,6 +69,12 @@
 		1A2B3C4D5E6F701122334481 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F701122334482 /* FirebaseBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseBootstrap.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F701122334483 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334495 /* ClosetItemsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetItemsRepository.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334496 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334497 /* ClosetItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetItemDetailView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334498 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F701122334499 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage+Resize.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449A /* StorageReference+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReference+Async.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,7 @@
 				1A2B3C4D5E6F70112233445D /* Repositories */,
 				1A2B3C4D5E6F70112233445E /* Services */,
 				1A2B3C4D5E6F70112233445F /* Components */,
+				1A2B3C4D5E6F70112233449B /* Utilities */,
 				1A2B3C4D5E6F701122334475 /* Assets.xcassets */,
 				1A2B3C4D5E6F701122334476 /* Info.plist */,
 			);
@@ -117,6 +130,8 @@
 			children = (
 				1A2B3C4D5E6F701122334462 /* HomeView.swift */,
 				1A2B3C4D5E6F701122334463 /* ClosetView.swift */,
+				1A2B3C4D5E6F701122334496 /* AddItemView.swift */,
+				1A2B3C4D5E6F701122334497 /* ClosetItemDetailView.swift */,
 				1A2B3C4D5E6F701122334464 /* FavoritesView.swift */,
 				1A2B3C4D5E6F701122334465 /* SettingsView.swift */,
 			);
@@ -150,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				1A2B3C4D5E6F70112233446F /* ClosetRepository.swift */,
+				1A2B3C4D5E6F701122334495 /* ClosetItemsRepository.swift */,
 				1A2B3C4D5E6F701122334470 /* OutfitRepository.swift */,
 			);
 			path = Repositories;
@@ -172,8 +188,18 @@
 			children = (
 				1A2B3C4D5E6F701122334473 /* LoadingView.swift */,
 				1A2B3C4D5E6F701122334474 /* ErrorBanner.swift */,
+				1A2B3C4D5E6F701122334498 /* ImagePicker.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F70112233449B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F701122334499 /* UIImage+Resize.swift */,
+				1A2B3C4D5E6F70112233449A /* StorageReference+Async.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +303,12 @@
 				1A2B3C4D5E6F701122334516 /* AuthService.swift in Sources */,
 				1A2B3C4D5E6F701122334517 /* FirebaseBootstrap.swift in Sources */,
 				1A2B3C4D5E6F701122334518 /* UserSession.swift in Sources */,
+				1A2B3C4D5E6F70112233451D /* ClosetItemsRepository.swift in Sources */,
+				1A2B3C4D5E6F70112233451E /* AddItemView.swift in Sources */,
+				1A2B3C4D5E6F70112233451F /* ClosetItemDetailView.swift in Sources */,
+				1A2B3C4D5E6F701122334520 /* ImagePicker.swift in Sources */,
+				1A2B3C4D5E6F701122334521 /* UIImage+Resize.swift in Sources */,
+				1A2B3C4D5E6F701122334522 /* StorageReference+Async.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

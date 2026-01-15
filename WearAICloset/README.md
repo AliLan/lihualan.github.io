@@ -13,6 +13,33 @@
 5. Download `GoogleService-Info.plist`.
 6. Place `GoogleService-Info.plist` in `WearAICloset/WearAICloset/` and add it to the **WearAICloset** target in Xcode.
 
+## Firestore & Storage Security Rules (Recommended)
+Use per-user rules so each signed-in user only reads/writes their own data:
+
+**Firestore**
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/items/{itemId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
+```
+
+**Storage**
+```
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /users/{userId}/items/{allPaths=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
+```
+
 ## Project Structure
 - `WearAICloset/` (app sources)
   - `Views/` — SwiftUI screens for the TabView app.

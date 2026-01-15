@@ -17,8 +17,7 @@ struct WearAIClosetApp: App {
             userSession: session
         ))
         _closetViewModel = StateObject(wrappedValue: ClosetViewModel(
-            closetRepository: MockClosetRepository(),
-            closetService: DefaultClosetService(),
+            closetItemsRepository: FirestoreClosetItemsRepository(),
             userSession: session
         ))
         _favoritesViewModel = StateObject(wrappedValue: FavoritesViewModel(

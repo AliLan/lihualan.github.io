@@ -25,7 +25,7 @@ final class HomeViewModel: ObservableObject {
     private func loadHighlights() {
         isLoading = true
         highlightItems = closetRepository.fetchHighlights()
-        currentMood = highlightItems.first?.mood ?? .calm
+        currentMood = .calm
         isLoading = false
         errorMessage = nil
     }

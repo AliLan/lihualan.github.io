@@ -7,12 +7,11 @@ protocol OutfitRepository {
 struct MockOutfitRepository: OutfitRepository {
     func fetchFavoriteOutfits() -> [Outfit] {
         let baseItem = ClothingItem(
-            name: "Cashmere Sweater",
-            category: .tops,
-            color: "Cream",
-            season: "Winter",
-            mood: .cozy,
-            occasion: .casual
+            id: UUID().uuidString,
+            imageURL: URL(string: "https://example.com/item5.jpg")!,
+            storagePath: "users/mock/items/item5.jpg",
+            category: .top,
+            createdAt: Date().addingTimeInterval(-604800)
         )
         return [
             Outfit(

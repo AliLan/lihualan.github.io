@@ -28,9 +28,9 @@ struct HomeView: View {
 
                 ForEach(viewModel.highlightItems) { item in
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(item.name)
+                        Text(item.category.displayName)
                             .font(.subheadline)
-                        Text("\(item.category.displayName) • \(item.color)")
+                        Text(item.createdAt.formatted(date: .abbreviated, time: .omitted))
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }

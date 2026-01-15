@@ -17,6 +17,12 @@ struct FavoritesView: View {
                         Text("\(outfit.items.count) pieces • \(outfit.occasion.displayName)")
                             .font(.caption)
                             .foregroundColor(.secondary)
+
+                        if let firstItem = outfit.items.first {
+                            Text("First item: \(firstItem.category.displayName)")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
                     }
                 }
 

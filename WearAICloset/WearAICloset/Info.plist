@@ -29,6 +29,10 @@
     </dict>
     <key>UILaunchScreen</key>
     <dict/>
+    <key>NSCameraUsageDescription</key>
+    <string>Allow access to take outfit photos.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Allow access to select clothing photos.</string>
     <key>UIRequiredDeviceCapabilities</key>
     <array>
         <string>armv7</string>

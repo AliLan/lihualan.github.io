@@ -1,41 +1,23 @@
 import Foundation
 
 struct ClothingItem: Identifiable, Codable {
-    let id: UUID
-    var name: String
+    let id: String
+    var imageURL: URL
+    var storagePath: String
     var category: Category
-    var color: String
-    var season: String
-    var imageName: String?
-    var mood: Mood
-    var occasion: Occasion
-    var isFavorite: Bool
-    var lastWorn: Date?
-    var notes: String?
+    var createdAt: Date
 
     init(
-        id: UUID = UUID(),
-        name: String,
+        id: String,
+        imageURL: URL,
+        storagePath: String,
         category: Category,
-        color: String,
-        season: String,
-        imageName: String? = nil,
-        mood: Mood,
-        occasion: Occasion,
-        isFavorite: Bool = false,
-        lastWorn: Date? = nil,
-        notes: String? = nil
+        createdAt: Date
     ) {
         self.id = id
-        self.name = name
+        self.imageURL = imageURL
+        self.storagePath = storagePath
         self.category = category
-        self.color = color
-        self.season = season
-        self.imageName = imageName
-        self.mood = mood
-        self.occasion = occasion
-        self.isFavorite = isFavorite
-        self.lastWorn = lastWorn
-        self.notes = notes
+        self.createdAt = createdAt
     }
 }
