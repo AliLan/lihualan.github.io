@@ -13,6 +13,12 @@ struct HomeView: View {
                         }
                     }
 
+                    if let saveMessage = viewModel.saveMessage {
+                        Text(saveMessage)
+                            .font(.caption)
+                            .foregroundColor(.green)
+                    }
+
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Mood")
                             .font(.headline)
@@ -59,7 +65,14 @@ struct HomeView: View {
                     } else {
                         VStack(alignment: .leading, spacing: 12) {
                             ForEach(viewModel.generatedOutfits) { outfit in
-                                OutfitResultView(outfit: outfit, itemsById: viewModel.itemsById)
+                                OutfitResultView(
+                                    outfit: outfit,
+                                    itemsById: viewModel.itemsById,
+                                    onSave: {
+                                        viewModel.saveOutfit(outfit)
+                                    },
+                                    isSaving: viewModel.isSaving
+                                )
                             }
                         }
                     }
@@ -74,6 +87,7 @@ struct HomeView: View {
 #Preview {
     HomeView(viewModel: HomeViewModel(
         closetItemsRepository: FirestoreClosetItemsRepository(),
+        outfitsRepository: FirestoreOutfitsRepository(),
         analyticsService: DefaultAnalyticsService(),
         userSession: UserSession(authService: DefaultAuthService())
     ))

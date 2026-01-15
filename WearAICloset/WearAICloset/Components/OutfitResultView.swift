@@ -3,6 +3,8 @@ import SwiftUI
 struct OutfitResultView: View {
     let outfit: OutfitResult
     let itemsById: [String: ClothingItem]
+    let onSave: () -> Void
+    let isSaving: Bool
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -18,6 +20,12 @@ struct OutfitResultView: View {
                     itemImage(for: outerId)
                 }
             }
+
+            Button("Save") {
+                onSave()
+            }
+            .buttonStyle(.bordered)
+            .disabled(isSaving)
         }
         .padding()
         .background(Color(.systemGray6))
@@ -67,6 +75,8 @@ struct OutfitResultView: View {
                 category: .top,
                 createdAt: Date()
             )
-        ]
+        ],
+        onSave: {},
+        isSaving: false
     )
 }

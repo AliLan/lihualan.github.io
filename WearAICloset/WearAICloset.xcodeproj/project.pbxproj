@@ -21,7 +21,6 @@
 		1A2B3C4D5E6F70112233450D /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233446D /* ClothingItem.swift */; };
 		1A2B3C4D5E6F70112233450E /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233446E /* Outfit.swift */; };
 		1A2B3C4D5E6F70112233450F /* ClosetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233446F /* ClosetRepository.swift */; };
-		1A2B3C4D5E6F701122334510 /* OutfitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334470 /* OutfitRepository.swift */; };
 		1A2B3C4D5E6F701122334511 /* ClosetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334471 /* ClosetService.swift */; };
 		1A2B3C4D5E6F701122334512 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334472 /* AnalyticsService.swift */; };
 		1A2B3C4D5E6F701122334513 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F701122334473 /* LoadingView.swift */; };
@@ -39,6 +38,8 @@
 		1A2B3C4D5E6F701122334523 /* OutfitResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449C /* OutfitResultView.swift */; };
 		1A2B3C4D5E6F701122334524 /* OutfitRuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449D /* OutfitRuleEngine.swift */; };
 		1A2B3C4D5E6F701122334525 /* OutfitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449E /* OutfitResult.swift */; };
+		1A2B3C4D5E6F701122334526 /* OutfitsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F70112233449F /* OutfitsRepository.swift */; };
+		1A2B3C4D5E6F701122334527 /* OutfitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7011223344A0 /* OutfitDetailView.swift */; };
 		1A2B3C4D5E6F701122334519 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334491 /* FirebaseAuth */; };
 		1A2B3C4D5E6F70112233451A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334492 /* FirebaseFirestore */; };
 		1A2B3C4D5E6F70112233451B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2B3C4D5E6F701122334493 /* FirebaseStorage */; };
@@ -61,7 +62,6 @@
 		1A2B3C4D5E6F70112233446D /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F70112233446E /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F70112233446F /* ClosetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetRepository.swift; sourceTree = "<group>"; };
-		1A2B3C4D5E6F701122334470 /* OutfitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitRepository.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F701122334471 /* ClosetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetService.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F701122334472 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F701122334473 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -81,6 +81,8 @@
 		1A2B3C4D5E6F70112233449C /* OutfitResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitResultView.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F70112233449D /* OutfitRuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitRuleEngine.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F70112233449E /* OutfitResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitResult.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F70112233449F /* OutfitsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitsRepository.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7011223344A0 /* OutfitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				1A2B3C4D5E6F701122334463 /* ClosetView.swift */,
 				1A2B3C4D5E6F701122334496 /* AddItemView.swift */,
 				1A2B3C4D5E6F701122334497 /* ClosetItemDetailView.swift */,
+				1A2B3C4D5E6F7011223344A0 /* OutfitDetailView.swift */,
 				1A2B3C4D5E6F701122334464 /* FavoritesView.swift */,
 				1A2B3C4D5E6F701122334465 /* SettingsView.swift */,
 			);
@@ -173,7 +176,7 @@
 			children = (
 				1A2B3C4D5E6F70112233446F /* ClosetRepository.swift */,
 				1A2B3C4D5E6F701122334495 /* ClosetItemsRepository.swift */,
-				1A2B3C4D5E6F701122334470 /* OutfitRepository.swift */,
+				1A2B3C4D5E6F70112233449F /* OutfitsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -304,7 +307,6 @@
 				1A2B3C4D5E6F70112233450D /* ClothingItem.swift in Sources */,
 				1A2B3C4D5E6F70112233450E /* Outfit.swift in Sources */,
 				1A2B3C4D5E6F70112233450F /* ClosetRepository.swift in Sources */,
-				1A2B3C4D5E6F701122334510 /* OutfitRepository.swift in Sources */,
 				1A2B3C4D5E6F701122334511 /* ClosetService.swift in Sources */,
 				1A2B3C4D5E6F701122334512 /* AnalyticsService.swift in Sources */,
 				1A2B3C4D5E6F701122334513 /* LoadingView.swift in Sources */,
@@ -321,6 +323,8 @@
 				1A2B3C4D5E6F701122334523 /* OutfitResultView.swift in Sources */,
 				1A2B3C4D5E6F701122334524 /* OutfitRuleEngine.swift in Sources */,
 				1A2B3C4D5E6F701122334525 /* OutfitResult.swift in Sources */,
+				1A2B3C4D5E6F701122334526 /* OutfitsRepository.swift in Sources */,
+				1A2B3C4D5E6F701122334527 /* OutfitDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,38 +5,99 @@ struct FavoritesView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 16) {
-                Text("Saved Outfits")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-
-                ForEach(viewModel.favoriteOutfits) { outfit in
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(outfit.name)
-                            .font(.subheadline)
-                        Text("\(outfit.items.count) pieces • \(outfit.occasion.displayName)")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-
-                        if let firstItem = outfit.items.first {
-                            Text("First item: \(firstItem.category.displayName)")
-                                .font(.caption2)
-                                .foregroundColor(.secondary)
+            List {
+                if let errorMessage = viewModel.errorMessage {
+                    Section {
+                        ErrorBanner(message: errorMessage) {
+                            viewModel.clearError()
                         }
                     }
                 }
 
-                Spacer()
+                if viewModel.outfits.isEmpty {
+                    Section {
+                        Text("No saved outfits yet")
+                            .foregroundColor(.secondary)
+                    }
+                } else {
+                    ForEach(viewModel.outfits) { outfit in
+                        NavigationLink {
+                            OutfitDetailView(
+                                outfit: outfit,
+                                itemsById: viewModel.itemsById,
+                                onDelete: {
+                                    Task { await viewModel.deleteOutfit(outfit) }
+                                }
+                            )
+                        } label: {
+                            OutfitRowView(outfit: outfit, itemsById: viewModel.itemsById)
+                        }
+                    }
+                }
             }
-            .padding()
+            .overlay {
+                if viewModel.isLoading {
+                    LoadingView(message: "Loading favorites...")
+                        .padding()
+                }
+            }
             .navigationTitle("Favorites")
+        }
+    }
+}
+
+private struct OutfitRowView: View {
+    let outfit: Outfit
+    let itemsById: [String: ClothingItem]
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("\(outfit.mood.displayName) • \(outfit.occasion.displayName)")
+                .font(.headline)
+
+            Text(outfit.createdAt.formatted(date: .abbreviated, time: .shortened))
+                .font(.caption)
+                .foregroundColor(.secondary)
+
+            HStack(spacing: 8) {
+                itemImage(for: outfit.topId)
+                itemImage(for: outfit.bottomId)
+                itemImage(for: outfit.shoesId)
+            }
+        }
+        .padding(.vertical, 4)
+    }
+
+    @ViewBuilder
+    private func itemImage(for itemId: String) -> some View {
+        if let item = itemsById[itemId] {
+            AsyncImage(url: item.imageURL) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image.resizable().scaledToFill()
+                case .failure:
+                    Image(systemName: "photo")
+                        .foregroundColor(.secondary)
+                @unknown default:
+                    EmptyView()
+                }
+            }
+            .frame(width: 44, height: 44)
+            .clipShape(RoundedRectangle(cornerRadius: 6))
+        } else {
+            RoundedRectangle(cornerRadius: 6)
+                .fill(Color(.systemGray4))
+                .frame(width: 44, height: 44)
         }
     }
 }
 
 #Preview {
     FavoritesView(viewModel: FavoritesViewModel(
-        outfitRepository: MockOutfitRepository(),
+        outfitsRepository: FirestoreOutfitsRepository(),
+        closetItemsRepository: FirestoreClosetItemsRepository(),
         userSession: UserSession(authService: DefaultAuthService())
     ))
 }

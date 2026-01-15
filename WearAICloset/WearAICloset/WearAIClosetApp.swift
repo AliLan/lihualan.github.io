@@ -10,18 +10,22 @@ struct WearAIClosetApp: App {
 
     init() {
         let session = UserSession(authService: DefaultAuthService())
+        let closetItemsRepository = FirestoreClosetItemsRepository()
+        let outfitsRepository = FirestoreOutfitsRepository()
         _userSession = StateObject(wrappedValue: session)
         _homeViewModel = StateObject(wrappedValue: HomeViewModel(
-            closetItemsRepository: FirestoreClosetItemsRepository(),
+            closetItemsRepository: closetItemsRepository,
+            outfitsRepository: outfitsRepository,
             analyticsService: DefaultAnalyticsService(),
             userSession: session
         ))
         _closetViewModel = StateObject(wrappedValue: ClosetViewModel(
-            closetItemsRepository: FirestoreClosetItemsRepository(),
+            closetItemsRepository: closetItemsRepository,
             userSession: session
         ))
         _favoritesViewModel = StateObject(wrappedValue: FavoritesViewModel(
-            outfitRepository: MockOutfitRepository(),
+            outfitsRepository: outfitsRepository,
+            closetItemsRepository: closetItemsRepository,
             userSession: session
         ))
         _settingsViewModel = StateObject(wrappedValue: SettingsViewModel(
